@@ -23,6 +23,7 @@ class ContactsTableViewController: UITableViewController {
       //adding an "Edit" button to the nav bar
         let moveButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(ContactsTableViewController.toggleEdit) as Selector)
         self.navigationItem.leftBarButtonItem = moveButton
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
         
       //load up the available info on each of the displayable contacts
         let jenny = Contact(phoneNumber: "867-5390")
