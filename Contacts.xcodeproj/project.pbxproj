@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		0E04FD3C1F4249AF007B0A89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04FD3B1F4249AF007B0A89 /* AppDelegate.swift */; };
-		0E04FD3E1F4249AF007B0A89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04FD3D1F4249AF007B0A89 /* ViewController.swift */; };
 		0E04FD411F4249AF007B0A89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E04FD3F1F4249AF007B0A89 /* Main.storyboard */; };
 		0E04FD431F4249AF007B0A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E04FD421F4249AF007B0A89 /* Assets.xcassets */; };
 		0E04FD461F4249B0007B0A89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E04FD441F4249B0007B0A89 /* LaunchScreen.storyboard */; };
+		0E04FD4E1F424AF2007B0A89 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04FD4D1F424AF2007B0A89 /* ContactsTableViewController.swift */; };
+		0E04FD521F425936007B0A89 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04FD511F425936007B0A89 /* Contact.swift */; };
+		0E04FD541F4264AE007B0A89 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04FD531F4264AE007B0A89 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E04FD381F4249AF007B0A89 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E04FD3B1F4249AF007B0A89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E04FD3D1F4249AF007B0A89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E04FD401F4249AF007B0A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E04FD421F4249AF007B0A89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E04FD451F4249B0007B0A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E04FD471F4249B0007B0A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E04FD4D1F424AF2007B0A89 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		0E04FD511F425936007B0A89 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = ../Contact.swift; sourceTree = "<group>"; };
+		0E04FD531F4264AE007B0A89 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				0E04FD3B1F4249AF007B0A89 /* AppDelegate.swift */,
-				0E04FD3D1F4249AF007B0A89 /* ViewController.swift */,
 				0E04FD3F1F4249AF007B0A89 /* Main.storyboard */,
+				0E04FD531F4264AE007B0A89 /* DetailsViewController.swift */,
+				0E04FD511F425936007B0A89 /* Contact.swift */,
+				0E04FD4D1F424AF2007B0A89 /* ContactsTableViewController.swift */,
 				0E04FD421F4249AF007B0A89 /* Assets.xcassets */,
 				0E04FD441F4249B0007B0A89 /* LaunchScreen.storyboard */,
 				0E04FD471F4249B0007B0A89 /* Info.plist */,
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E04FD3E1F4249AF007B0A89 /* ViewController.swift in Sources */,
+				0E04FD521F425936007B0A89 /* Contact.swift in Sources */,
 				0E04FD3C1F4249AF007B0A89 /* AppDelegate.swift in Sources */,
+				0E04FD4E1F424AF2007B0A89 /* ContactsTableViewController.swift in Sources */,
+				0E04FD541F4264AE007B0A89 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
