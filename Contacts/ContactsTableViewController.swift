@@ -16,15 +16,13 @@ class ContactsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      //adding an "Edit" button to the nav bar
-       /* let moveButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(ContactsTableViewController.toggleEdit) as Selector)
-        self.navigationItem.leftBarButtonItem = moveButton
-       */
+      //adds a button to create new contacts to the tableView to the nav bar
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(ContactsTableViewController.addContact))
+        navigationItem.rightBarButtonItem = addButton
         
-      //this will allow the edit button to be displayed when its not being used
-        func toggleEdit() {
-            tableView.setEditing(!tableView.isEditing, animated: true)
-        }
+      //adding an "Edit" button to the nav bar
+        let moveButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(ContactsTableViewController.toggleEdit) as Selector)
+        self.navigationItem.leftBarButtonItem = moveButton
         
       //load up the available info on each of the displayable contacts
         let jenny = Contact(phoneNumber: "867-5390")
@@ -40,9 +38,28 @@ class ContactsTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        //self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
-
+    
+  //Implementing the 'addContact' button function
+    func addContact() {
+        let newContact = Contact(name: "New Contact")
+        self.contacts.append(newContact)
+        let newIndexPath = IndexPath(row: self.contacts.count - 1, section: 0)
+        self.tableView.insertRows(at: [newIndexPath], with: .automatic)
+    }
+    
+    //this will allow the edit button to be displayed when its not being used
+    func toggleEdit() {
+        tableView.setEditing(!tableView.isEditing, animated: true)
+    }
+  
+  //tells the viewController to reload the data incase of user changes and save any
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
